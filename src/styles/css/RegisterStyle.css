@@ -1,0 +1,138 @@
+.register-container {
+  -ms-flex-preferred-size: 660px;
+      flex-basis: 660px;
+  max-width: 660px;
+  border: 2px solid #ebebeb;
+  background: #3f3f3f;
+  color: #ebebeb;
+  border-radius: 15px;
+  font-weight: 500;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.register-container .register-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.register-container .register-header .header-title {
+  font-size: 22px;
+}
+
+.register-container .register-line {
+  border-top: 0;
+  border: 1px solid #ebebeb;
+}
+
+.register-container .register-form {
+  width: 75%;
+}
+
+.register-container .register-form .inputs-container {
+  width: 100%;
+}
+
+.register-container .register-form .inputs-container .input-box {
+  width: 48%;
+}
+
+.register-container .register-form .input-box .label {
+  margin: 0;
+}
+
+.register-container .register-form .input-box .input {
+  margin: 0;
+  padding: 0 8px;
+  color: #ebebeb;
+  border-radius: 15px;
+  background: transparent;
+  border: 2px solid #ebebeb;
+}
+
+.register-container .register-form .input-box .input:focus {
+  outline: none;
+  border: 2px solid #8DAFE2;
+}
+
+.register-container .register-form .btns-box {
+  width: 100%;
+}
+
+.register-container .register-footer {
+  width: 35%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.register-container .register-footer .footer-text {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.register-container .register-footer .login-btn {
+  height: 30px;
+  width: 80px;
+  margin: 0 auto;
+}
+
+.register-container .register-footer .login-btn:hover {
+  background: #8DAFE2;
+  width: 80%;
+}
+
+.register-btn, .cities-add-btn {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.register-btn .btn-text, .cities-add-btn .btn-text {
+  letter-spacing: -10px;
+  opacity: 0;
+  -webkit-transition: opacity .3s, letter-spacing .3s;
+  transition: opacity .3s, letter-spacing .3s;
+}
+
+.register-btn .iconify, .cities-add-btn .iconify {
+  position: absolute;
+  font-size: 24px;
+  left: 0px;
+}
+
+.register-btn:hover, .cities-add-btn:hover {
+  width: 48%;
+  color: #ebebeb;
+}
+
+.register-btn:hover .btn-text, .cities-add-btn:hover .btn-text {
+  letter-spacing: normal;
+  opacity: 1;
+}
+
+.cancel-btn .iconify {
+  left: 1px;
+}
+
+.create-btn .iconify {
+  top: 1px;
+}
+
+.cancel-btn:hover {
+  background: #dd5656;
+}
+
+.create-btn:hover {
+  background: #8DAFE2;
+}
+
+.warning-text {
+  font-size: 14px;
+  color: #dd5656;
+  margin: 5px 0 0 0;
+}
+/*# sourceMappingURL=RegisterStyle.css.map */
