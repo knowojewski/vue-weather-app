@@ -60,7 +60,36 @@ export default class Weather extends Vue {
     "speed": 500,
     "slidesToShow": 5,
     "slidesToScroll": 1,
-    "touchThreshold": 5
+    "touchThreshold": 5,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 4
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 420,
+        settings: {
+          slidesToShow: 1,
+          variableWidth: true,
+          "centerMode": true,
+          "centerPadding": '50px',
+        }
+      }
+    ]
   }
 
   user = this.$store.state.users.user;

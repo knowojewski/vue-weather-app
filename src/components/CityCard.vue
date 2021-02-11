@@ -121,4 +121,8 @@ $red-warning:  #dd5656;
         }
     }
 }
+
+@media (max-width: 420px) {
+  
+}
 </style>

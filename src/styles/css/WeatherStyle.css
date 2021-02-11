@@ -71,7 +71,7 @@
 
 .weather-container .top .bg-image {
   position: absolute;
-  width: 100%;
+  max-width: 950px;
   bottom: -1px;
   left: 0;
   opacity: .8;
@@ -223,7 +223,7 @@
 }
 
 .weather-container .bottom .bottom-bg .city {
-  width: 100%;
+  max-width: 950px;
   opacity: .1;
   bottom: 0;
   left: 0;
@@ -499,6 +499,54 @@
   }
   100% {
     left: 1000px;
+  }
+}
+
+@media (max-width: 576px) {
+  .weather-container .top {
+    padding: 10px;
+  }
+  .weather-container .top .header .header-title {
+    font-size: 26px;
+    margin: 0;
+  }
+  .weather-container .top .header .header-title::after {
+    width: 80%;
+  }
+  .weather-container .top .header .add-btn {
+    width: 45px;
+  }
+  .weather-container .top .header .add-btn:hover {
+    width: 85px;
+  }
+  .weather-container .top .cities-slider {
+    padding: 20px;
+  }
+  .weather-container .top .cities-slider .slick-prev {
+    left: -8px;
+  }
+  .weather-container .top .cities-slider .slick-next {
+    right: -8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .weather-container .top .header .header-title {
+    font-size: 23px;
+  }
+  .weather-container .top .header .add-btn {
+    height: 35px;
+    width: 35px;
+  }
+  .weather-container .top .header .add-btn .iconify {
+    font-size: 26px;
+  }
+  .weather-container .top .header .add-btn:hover {
+    width: 50px;
+  }
+  .weather-container .top .cities-slider .slick-slide {
+    width: 165px;
+    margin: 0 50px;
   }
 }
 /*# sourceMappingURL=WeatherStyle.css.map */
