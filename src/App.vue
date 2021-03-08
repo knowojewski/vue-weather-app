@@ -42,19 +42,15 @@ html, * {
 body {
   font-family: 'Montserrat', sans-serif;
   background: #59606C;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // min-height: 100vh;
 }
 
 .app-container {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 }
 
 .btn {

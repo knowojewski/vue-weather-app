@@ -4,9 +4,16 @@ $blue-color: #8DAFE2;
 $red-warning:  #dd5656;
 @mixin drop-shadow { box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25); }
 
-.register-container {
-    flex-basis: 660px;
+.register-row {
+    margin: 0 auto;
     max-width: 660px;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.register-container {
+    width: 100%;
     border: 2px solid $light-grey;
     background: $dark-grey;
     color: $light-grey;

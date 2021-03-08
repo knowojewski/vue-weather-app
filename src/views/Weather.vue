@@ -1,35 +1,35 @@
 <template>
-  <div class="weather-bg">
-    <AddCity v-if="$store.state.ui.addCityModalOpened"/>
-    <div class="weather-container">
-      <button @click="logOutHandler" class="btn logout-btn" title="Log out">
-        <span class="iconify" data-inline="false" data-icon="fa-solid:sign-out-alt" style="color: #ebebeb;"></span>
-      </button>
-      <div class="top">
-        <img class="bg-image" src="../assets/top-bg.png" alt="Top side background">
-        <div class="header pb-2 mb-4">
-          <h1 class="header-title">Weather Forecast</h1>
-          <button @click="openAddModalHandler" class="btn add-btn" title="Add city">
-            <span class="iconify" data-inline="false" data-icon="fluent:add-24-filled" style="color: #ebebeb;"></span>
-          </button>
+    <div class="weather-row">
+      <AddCity v-if="$store.state.ui.addCityModalOpened"/>
+      <div class="weather-container">
+        <button @click="logOutHandler" class="btn logout-btn" title="Log out">
+          <span class="iconify" data-inline="false" data-icon="fa-solid:sign-out-alt" style="color: #ebebeb;"></span>
+        </button>
+        <div class="top">
+          <img class="bg-image" src="../assets/top-bg.png" alt="Top side background">
+          <div class="header pb-2 mb-4">
+            <h1 class="header-title">Weather Forecast</h1>
+            <button @click="openAddModalHandler" class="btn add-btn" title="Add city">
+              <span class="iconify" data-inline="false" data-icon="fluent:add-24-filled" style="color: #ebebeb;"></span>
+            </button>
+          </div>
+          <div class="empty-cities" v-if="$store.state.users.user.cities.length === 0">
+            <p class="empty-text m-0">You don't observe any city yet.</p>
+          </div>
+          <div v-else class="cities-slider">
+            <Slick ref="slick" :options="settings">
+              <CityCard 
+              v-for="city in $store.state.users.user.cities" 
+              :key="city.id" 
+              :cityProp="city"
+              component='Weather'
+              />
+            </Slick>
+          </div>
         </div>
-        <div class="empty-cities" v-if="$store.state.users.user.cities.length === 0">
-          <p class="empty-text m-0">You don't observe any city yet.</p>
-        </div>
-        <div v-else class="cities-slider">
-          <Slick ref="slick" :options="settings">
-            <CityCard 
-            v-for="city in $store.state.users.user.cities" 
-            :key="city.id" 
-            :cityProp="city"
-            component='Weather'
-            />
-          </Slick>
-        </div>
+        <WeatherInfos />
       </div>
-      <WeatherInfos />
     </div>
-  </div>
 </template>
 
 <script lang="ts">
@@ -131,7 +131,6 @@ export default class Weather extends Vue {
   }
 
   created() {
-    // this.$store.dispatch('fetchWeather');
     this.$store.dispatch('fetchCities');
   }
 }

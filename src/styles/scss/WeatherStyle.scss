@@ -10,16 +10,18 @@ $red-warning:  #dd5656;
   flex-direction: $direction;
 }
 
-.weather-bg {
-  width: 100%;
-  height: 100%;
+.weather-row {
+  min-height: 100vh;
+  max-width: 950px;
+  margin: 0 auto;
+  @include display-flex(center, center, row) 
 }
 
 .weather-container {
+  width: 100%;
   position: relative;
-  max-width: 950px;
-  margin: 110px auto;
   background: $dark-grey;
+  margin: 110px 0;
   color: $light-grey;
   @include drop-shadow();
   border-radius: 15px;
@@ -73,9 +75,7 @@ $red-warning:  #dd5656;
       width: 100%;
       @include display-flex(space-between, center, row);
 
-      .header-title {
-        font-size: 30px;
-      }
+      .header-title { font-size: 30px; }
 
       .header-title::after{
         content: '';
@@ -110,6 +110,8 @@ $red-warning:  #dd5656;
       background: rgba(0, 0, 0, 0.645);
       border-radius: 15px;
       backdrop-filter: blur(5px);
+      padding: 10px;
+      text-align: center;
 
       @include display-flex(center, center, row);
 
@@ -373,6 +375,10 @@ $red-warning:  #dd5656;
         
         .add-btn:hover { width: 85px; }
       }
+
+      .empty-cities {
+        .empty-text { font-size: 20px;}
+      }
       
       .cities-slider {
         padding: 20px;
@@ -395,10 +401,14 @@ $red-warning:  #dd5656;
           height: 35px;
           width: 35px; 
 
-          .iconify { font-size: 26px; }
+          .iconify { font-size: 23px; }
         }
   
         .add-btn:hover { width: 50px; }
+      }
+
+      .empty-cities {
+        .empty-text { font-size: 18px;}
       }
 
       .cities-slider {

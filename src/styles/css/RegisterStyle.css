@@ -1,7 +1,17 @@
-.register-container {
-  -ms-flex-preferred-size: 660px;
-      flex-basis: 660px;
+.register-row {
+  margin: 0 auto;
   max-width: 660px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.register-container {
+  width: 100%;
   border: 2px solid #ebebeb;
   background: #3f3f3f;
   color: #ebebeb;

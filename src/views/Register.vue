@@ -1,50 +1,52 @@
 <template>
-  <div class="register-container p-4">
-      <div class="register-header">
-          <img class="header-icon mr-3" src="../assets/svg/register-icon.svg" alt="Register Icon">
-          <h3 class="header-title mb-0">Create an account </h3>
-      </div>
-      <hr class="register-line mb-4"> 
-      <form class="register-form mr-auto ml-auto">
-          <div class="input-box d-flex flex-column mb-2">
-            <label class="label" for="email">E-mail: </label>
-            <input class="input" type="text" id="email" v-model="email">
-            <p v-if="emailTaken" class="warning-text">This e-mail address is already in use.</p>
-            <p v-if="validEmail === false" class="warning-text">Invalid e-mail address...</p>
-          </div>
-          <div class="input-box d-flex flex-column mb-2">
-            <label class="label" for="login">Login: </label>
-            <input class="input" type="text" id="login" v-model="login">
-            <p v-if="loginTaken" class="warning-text">This login is already in use.</p>
-            <p v-if="validLogin === false" class="warning-text">Login must have at least 3 characters.</p>
-          </div>
-          <div class="inputs-container d-flex justify-content-between">
-              <div class="input-box d-flex flex-column">
-                <label class="label" for="password">Password: </label>
-                <input class="input" type="password" id="password" v-model="password">
-              </div>
-              <div class="input-box d-flex flex-column">
-                <label class="label" for="password-confirm">Password confirm: </label>
-                <input class="input" type="password" id="password-confirm" v-model="passwordConfirm">
-              </div>
-          </div>
-          <p v-if="wrongPassword" class="warning-text">Passwords are not the same.</p>
-          <p v-if="validPassword === false" class="warning-text">Password must contain at least one capital letter, number and be 8 characters long.</p>
-          <div class="btns-box d-flex justify-content-between mb-3 mt-4">
-              <button class="btn register-btn cancel-btn" @click.prevent="$router.push('/login')">
-                  <span class="iconify" data-inline="false" data-icon="carbon:close" style="color: #ebebeb;"></span>
-                  <span class="btn-text">Cancel</span> 
-              </button>
-              <button class="btn register-btn create-btn" @click.prevent="onRegisterClick">
-                  <span class="iconify" data-inline="false" data-icon="line-md:confirm" style="color: #ebebeb;"></span>
-                  <span class="btn-text">Create</span> 
-              </button>
-          </div>
-      </form>
-      <div class="register-footer">
-          <p class="footer-text mb-1">Already have an account?</p>
-          <router-link to="/login" class="btn login-btn">Log in</router-link>
-      </div>
+  <div class="register-row">
+      <div class="register-container p-4">
+        <div class="register-header">
+            <img class="header-icon mr-3" src="../assets/svg/register-icon.svg" alt="Register Icon">
+            <h3 class="header-title mb-0">Create an account </h3>
+        </div>
+        <hr class="register-line mb-4"> 
+        <form class="register-form mr-auto ml-auto">
+            <div class="input-box d-flex flex-column mb-2">
+                <label class="label" for="email">E-mail: </label>
+                <input class="input" type="text" id="email" v-model="email">
+                <p v-if="emailTaken" class="warning-text">This e-mail address is already in use.</p>
+                <p v-if="validEmail === false" class="warning-text">Invalid e-mail address...</p>
+            </div>
+            <div class="input-box d-flex flex-column mb-2">
+                <label class="label" for="login">Login: </label>
+                <input class="input" type="text" id="login" v-model="login">
+                <p v-if="loginTaken" class="warning-text">This login is already in use.</p>
+                <p v-if="validLogin === false" class="warning-text">Login must have at least 3 characters.</p>
+            </div>
+            <div class="inputs-container d-flex justify-content-between">
+                <div class="input-box d-flex flex-column">
+                    <label class="label" for="password">Password: </label>
+                    <input class="input" type="password" id="password" v-model="password">
+                </div>
+                <div class="input-box d-flex flex-column">
+                    <label class="label" for="password-confirm">Password confirm: </label>
+                    <input class="input" type="password" id="password-confirm" v-model="passwordConfirm">
+                </div>
+            </div>
+            <p v-if="wrongPassword" class="warning-text">Passwords are not the same.</p>
+            <p v-if="validPassword === false" class="warning-text">Password must contain at least one capital letter, number and be 8 characters long.</p>
+            <div class="btns-box d-flex justify-content-between mb-3 mt-4">
+                <button class="btn register-btn cancel-btn" @click.prevent="$router.push('/login')">
+                    <span class="iconify" data-inline="false" data-icon="carbon:close" style="color: #ebebeb;"></span>
+                    <span class="btn-text">Cancel</span> 
+                </button>
+                <button class="btn register-btn create-btn" @click.prevent="onRegisterClick">
+                    <span class="iconify" data-inline="false" data-icon="line-md:confirm" style="color: #ebebeb;"></span>
+                    <span class="btn-text">Create</span> 
+                </button>
+            </div>
+        </form>
+        <div class="register-footer">
+            <p class="footer-text mb-1">Already have an account?</p>
+            <router-link to="/login" class="btn login-btn">Log in</router-link>
+        </div>
+    </div>
   </div>
 </template>
 

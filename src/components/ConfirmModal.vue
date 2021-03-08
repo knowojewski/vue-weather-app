@@ -1,6 +1,6 @@
 <template>
-  <div class="confirm-bg d-flex align-items-center justify-content-center">
-      <div class="alert-box confirm-box p-4">
+  <div class="confirm-bg">
+      <div class="alert-box confirm-box p-4 m-2">
         <h4 class="alert-title">{{ modalInfos.title }}</h4>
         <hr class="alert-line">
         <p class="alert-content">{{ modalInfos.content }}</p>
@@ -25,9 +25,16 @@ export default class ConfirmModal extends Vue {
 $dark-grey: #3f3f3f;
 $light-grey: #ebebeb;
 $blue-color: #8DAFE2;
+@mixin display-flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
 
 .confirm-bg {
   position: fixed;
+  @include display-flex(center, center, row);
   width: 100%;
   height: 100%;
   top: 0;
@@ -36,11 +43,7 @@ $blue-color: #8DAFE2;
   z-index: 100;
 }
 
-.confirm-box {
-  background: $dark-grey;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
+.confirm-box { background: $dark-grey;}
 
 .loader {
   display: inline-block;
@@ -48,19 +51,5 @@ $blue-color: #8DAFE2;
   height: 30px;
   margin-right: 20px;
   border: 2px solid $light-grey;
-}
-
-@keyframes loader-anim {
-  0% {
-    transform: rotateZ(0);
-  }
-
-  70% {
-    transform: rotateZ(0);
-  }
-
-  100% {
-
-  }
 }
 </style>

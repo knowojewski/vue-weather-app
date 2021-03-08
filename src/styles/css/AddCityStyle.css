@@ -1,8 +1,15 @@
 .modal-bg {
   position: fixed;
-  width: 100%;
-  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   background: rgba(0, 0, 0, 0.6);
+  overflow-y: scroll;
+  z-index: 2;
+}
+
+.add-city-modal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,16 +23,16 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  z-index: 2;
+  max-width: 1000px;
+  margin: 100px auto;
 }
 
-.add-city-modal {
-  position: relative;
-  -ms-flex-preferred-size: 1000px;
-      flex-basis: 1000px;
-  margin: 100px 0;
+.add-city-modal .add-city-content {
   background: -webkit-gradient(linear, left top, left bottom, from(#8DAFE2), to(#FF9696));
   background: linear-gradient(180deg, #8DAFE2 0%, #FF9696 100%);
+  position: relative;
+  width: 100%;
+  height: 500px;
   border-radius: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -82,6 +89,7 @@
 
 .add-city-modal .left-side {
   width: 60%;
+  height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(#3F3F3F), to(rgba(63, 63, 63, 0.92)));
   background: linear-gradient(180deg, #3F3F3F 0%, rgba(63, 63, 63, 0.92) 100%);
   border: 1px solid #EBEBEB;
@@ -93,7 +101,6 @@
 
 .add-city-modal .left-side .search-result {
   width: 100%;
-  height: 420px;
   overflow-y: scroll;
 }
 
@@ -188,7 +195,7 @@
 }
 
 .add-city-modal .right-side {
-  height: 500px;
+  height: 100%;
   width: 40%;
 }
 
